@@ -1,5 +1,5 @@
 // Lib
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
@@ -14,15 +14,6 @@ import CalendarData from '../../Data/CalendarData';
 const Home = () => {
   const [calendar] = useState(CalendarData);
 
-  useEffect(() => {
-    console.log(
-      calendar
-        .years.find(x => x.id === '2019')
-        .months.find(x => x.id === '201907')
-        .agendas
-    );
-  });
-
   return (
     <Router>
       <div className="container">
@@ -31,12 +22,12 @@ const Home = () => {
           <div className="content-container">
 
             <Switch>
-              <Route path="/calendar">
-                <Calendar calendar={calendar}/>
-              </Route>
-              
               <Route path="/agenda/:yearId/:monthId">
                 <Agenda calendar={calendar}/>
+              </Route>
+              
+              <Route path="/">
+                <Calendar calendar={calendar}/>
               </Route>
             </Switch>
 
