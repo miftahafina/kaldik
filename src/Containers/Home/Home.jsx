@@ -112,6 +112,9 @@ const Home = () => {
           }
         </div>
       </div>
+      <div className="fab">
+        &laquo;
+      </div>
     </div>
   )
 }

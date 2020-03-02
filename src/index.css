@@ -7,6 +7,7 @@
   --text: #000000;
   --text-light: #FFFFFF;
   --text-secondary: #333333;
+  --shadow: #ababab;
 }
 
 html, body, .container, #root {
@@ -51,6 +52,7 @@ body {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 32px;
   color: var(--text-light);
+  margin: 0px 0px 4px 0px;
 }
 
 .subtitle {
@@ -64,7 +66,7 @@ body {
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 16px 16px 0px 0px;
-  padding: 16px 16px 40px 16px ;
+  padding: 16px 16px 80px 16px ;
 
   display: flex;
   flex-direction: column;
@@ -97,24 +99,21 @@ body {
   padding: 16px 16px;
   margin: 8px 8px;
   border-radius: 8px;
+  transition: all 0.1s ease-in-out;
 }
 
-.month {
-  width: 100%;
-  box-sizing: border-box;
-  background-color: var(--primary-light);
-  color: var(--primary);
-  padding: 16px 16px;
-  margin: 8px 8px;
-  border-radius: 8px;
+.month:hover {
+  cursor: pointer;
+}
+
+.month:active {
+   box-shadow: 0 2px 8px 0 var(--shadow);
 }
 
 .agenda {
   width: 100%;
   box-sizing: border-box;
   /* background-color: var(--primary-light); */
-  /* padding: 16px 16px;
-  border-radius: 8px; */
   margin: 0px 0px 8px 0px;
 
   display: flex;
@@ -126,8 +125,8 @@ body {
 .agenda-date-box {
   height: 60px;
   flex: 0 0 60px;
-  background-color: orange;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--text-light);
   box-sizing: border-box;
   border-radius: 8px;
   padding: 8px 8px;
@@ -137,7 +136,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .agenda-date {
@@ -148,9 +147,49 @@ body {
   font-size: 12px;
 }
 
+.agenda-date-begin {
+  font-size: 12px;
+}
+
+.agenda-date-end {
+  font-size: 12px;
+}
+
+.agenda-date-divider {
+  border-top: 1px solid white;
+  width: 24px;
+  margin: 7px 0px 8px 0px;
+}
+
 .agenda-desc {
   /* background-color: bisque; */
   color: var(--text-secondary);
   font-size: 16px;
   line-height: 24px;
+}
+
+.fab {
+   width: 48px;
+   height: 48px;
+   background-color: var(--primary);
+   border-radius: 50%;
+   /* box-shadow: 0 6px 10px 0 #666; */
+   transition: all 0.1s ease-in-out;
+ 
+   font-size: 32px;
+   color: white;
+   text-align: center;
+   line-height: 42px;
+ 
+   position: fixed;
+   right: 24px;
+   bottom: 24px;
+}
+
+.fab:hover {
+  cursor: pointer;
+}
+ 
+.fab:active {
+   box-shadow: 0 4px 12px 0 var(--shadow);
 }
