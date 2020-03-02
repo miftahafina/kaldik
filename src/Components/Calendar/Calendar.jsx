@@ -84,36 +84,26 @@ const Calendar = () => {
   })
 
   return (
-    <div className="container">
-      <div className="header">
-        <div className="title">Kaldik</div>
-        <div className="subtitle">Kalender Pendidikan</div>
-      </div>
-
-      <div className="content">
-        <div className="content-container">
-          {
-            agenda.years.map(year => {
-              return (
-                <Fragment key={year.id}>
-                  <div className="year">{year.name}</div>
-                  {
-                    year.months.map(month => {
-                      return (
-                        <div className="month" key={month.id}>
-                          {month.name}
-                        </div>
-                      )
-                    })
-                  }
-                </Fragment>
-              )
-            })
-          }
-        </div>
-      </div>
-
-    </div>
+    <Fragment>
+    {
+      agenda.years.map(year => {
+        return (
+          <Fragment key={year.id}>
+            <div className="year">{year.name}</div>
+            {
+              year.months.map(month => {
+                return (
+                  <div className="month" key={month.id}>
+                    {month.name}
+                  </div>
+                )
+              })
+            }
+          </Fragment>
+        )
+      })
+    }
+    </Fragment>
   )
 }
 
