@@ -1,9 +1,14 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import { withRouter } from 'react-router';
 
 const Agenda = (props) => {
+  const [params] = useState({
+      yearId: props.match.params.yearId,
+      monthId: props.match.params.monthId,
+  });
+
   const monthAbbr = (month) => {
     let abbr = ['JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AGS', 'SEP', 'OKT', 'NOV', 'DES'];
-
     return abbr[month];
   }
 
@@ -11,8 +16,8 @@ const Agenda = (props) => {
     <Fragment>
       {
       props.calendar
-        .years.find(x => x.id === '2020')
-        .months.find(x => x.id === '202006')
+        .years.find(x => x.id === params.yearId)
+        .months.find(x => x.id === params.monthId)
         .agendas.map((agenda) => {
           if (agenda.end) {
             return (
@@ -58,4 +63,4 @@ const Agenda = (props) => {
   );
 }
 
-export default Agenda;
+export default withRouter(Agenda);

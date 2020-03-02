@@ -35,7 +35,7 @@ const Home = () => {
                 <Calendar calendar={calendar}/>
               </Route>
               
-              <Route path="/agenda">
+              <Route path="/agenda/:yearId/:monthId">
                 <Agenda calendar={calendar}/>
               </Route>
             </Switch>
