@@ -7,7 +7,7 @@ import 'normalize.css';
 import './index.css';
 
 // Components
-import Home from './Containers/Home/Home'
+import Home from './Containers/Home/Home';
 
 // SW
 import * as serviceWorker from './serviceWorker';
