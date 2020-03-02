@@ -1,5 +1,4 @@
 import React from 'react';
-import Calendar from '../../img/calendar.svg';
 
 const Agenda = () => {
   return (
