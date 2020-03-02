@@ -1,8 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import './Home.css';
-import 'normalize.css';
 import { useEffect } from 'react';
-
 
 const Home = () => {
   const [agenda] = useState({
@@ -94,7 +91,7 @@ const Home = () => {
       </div>
 
       <div className="content">
-        <div className="months-container">
+        <div className="content-container">
           {
             agenda.years.map(year => {
               return (

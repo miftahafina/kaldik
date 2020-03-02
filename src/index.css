@@ -72,7 +72,7 @@ body {
   justify-content: flex-start;
 }
 
-.months-container {
+.content-container {
   width: 100%;
   box-sizing: border-box;
 
@@ -97,4 +97,60 @@ body {
   padding: 16px 16px;
   margin: 8px 8px;
   border-radius: 8px;
+}
+
+.month {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 16px 16px;
+  margin: 8px 8px;
+  border-radius: 8px;
+}
+
+.agenda {
+  width: 100%;
+  box-sizing: border-box;
+  /* background-color: var(--primary-light); */
+  /* padding: 16px 16px;
+  border-radius: 8px; */
+  margin: 0px 0px 8px 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.agenda-date-box {
+  height: 60px;
+  flex: 0 0 60px;
+  background-color: orange;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px 8px;
+  margin: 8px 16px 8px 0px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agenda-date {
+  font-size: 28px;
+}
+
+.agenda-month {
+  font-size: 12px;
+}
+
+.agenda-desc {
+  /* background-color: bisque; */
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 24px;
 }
