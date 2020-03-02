@@ -11,8 +11,8 @@ const Agenda = (props) => {
     <Fragment>
       {
       props.calendar
-        .years.find(x => x.id === '2019')
-        .months.find(x => x.id === '201907')
+        .years.find(x => x.id === '2020')
+        .months.find(x => x.id === '202006')
         .agendas.map((agenda) => {
           if (agenda.end) {
             return (
