@@ -27,8 +27,9 @@ const Agenda = (props) => {
                   </div>
 
                 </div>
-                <div className="agenda-desc">
-                  {agenda.desc}
+                <div className="agenda-desc-box">
+                  <div className="agenda-desc">{agenda.desc}</div>
+                  <div className="agenda-note">{agenda.note}</div>
                 </div>
               </div>
             )
@@ -44,8 +45,9 @@ const Agenda = (props) => {
                     {monthAbbr(agenda.begin.getMonth())}
                   </div>
                 </div>
-                <div className="agenda-desc">
-                  {agenda.desc}
+                <div className="agenda-desc-box">
+                  <div className="agenda-desc">{agenda.desc}</div>
+                  <div className="agenda-note">{agenda.note}</div>
                 </div>
               </div>
             )

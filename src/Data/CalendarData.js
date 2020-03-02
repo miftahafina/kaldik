@@ -14,12 +14,14 @@ const CalendarData = {
               begin: new Date(2019, 6, 3),
               end: null,
               desc: 'Awal masuk kerja asatidzah TP. 2019/2020',
+              note: 'Ini adalah keterangan'
             },
             {
               id: '20190702',
               begin: new Date(2019, 6, 7),
               end: null,
               desc: 'Awal masuk santriwan/wati baru diantar orang tua/wali (PWSB pkl 7.00)',
+              note: 'Ini adalah keterangan yang sangat panjang sekali sampai-sampai satu baris pun tidak cukup'
             },
             {
               id: '20190703',
