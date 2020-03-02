@@ -1,11 +1,12 @@
 // Lib
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
 import Fab from '../../Components/Fab/Fab';
 import Header from '../../Components/Header/Header';
+import Calendar from '../../Components/Calendar/Calendar';
 import Agenda from '../../Components/Agenda/Agenda';
-// import Calendar from '../../Components/Calendar/Calendar';
 
 // Data
 import CalendarData from '../../Data/CalendarData';
@@ -23,18 +24,27 @@ const Home = () => {
   });
 
   return (
-    <div className="container">
-      <Header />
+    <Router>
+      <div className="container">
+        <Header />
+        <div className="content">
+          <div className="content-container">
 
-      <div className="content">
-        <div className="content-container">
-          <Agenda calendar={calendar}/>
-          {/* <Calendar calendar={calendar}/> */}
+            <Switch>
+              <Route path="/calendar">
+                <Calendar calendar={calendar}/>
+              </Route>
+              
+              <Route path="/agenda">
+                <Agenda calendar={calendar}/>
+              </Route>
+            </Switch>
+
+          </div>
         </div>
+        <Fab />
       </div>
-
-      <Fab />
-    </div>
+    </Router>
   );
 }
 
