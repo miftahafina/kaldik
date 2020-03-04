@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import HeaderContext from '../../Context/HeaderContext';
 
-const Header = () => {
+const Header = (props) => {
+  const headerData = useContext(HeaderContext);
+
+  useEffect(() => {
+    console.log(headerData);
+  });
+
   return (
     <div className="header">
-      <div className="title">Maret</div>
-      <div className="subtitle">2020</div>
+      <div className="title">{headerData.title}</div>
+      <div className="subtitle">{headerData.subtitle}</div>
     </div>
   );
 }

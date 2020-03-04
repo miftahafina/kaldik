@@ -11,13 +11,17 @@ import Agenda from '../../Components/Agenda/Agenda';
 // Data
 import CalendarData from '../../Data/CalendarData';
 
+// Context
+// import { HeaderProvider } from '../../Context/HeaderContext';
+
 const Home = () => {
   const [calendar] = useState(CalendarData);
+
 
   return (
     <Router>
       <div className="container">
-        <Header />
+        <Header/>
         <div className="content">
           <div className="content-container">
 
@@ -25,7 +29,7 @@ const Home = () => {
               <Route path="/agenda/:yearId/:monthId">
                 <Agenda calendar={calendar}/>
               </Route>
-              
+
               <Route path="/">
                 <Calendar calendar={calendar}/>
               </Route>
