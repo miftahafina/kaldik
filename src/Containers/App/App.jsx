@@ -1,31 +1,28 @@
 // Lib
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
 import Fab from '../../Components/Fab/Fab';
 import Header from '../../Components/Header/Header';
 import Calendar from '../../Components/Calendar/Calendar';
-import AgendaContainer from '../../Containers/AgendaContainer/AgendaContainer';
+import AgendaContainer from '../AgendaContainer/AgendaContainer';
 
 // Data
 import CalendarData from '../../Data/CalendarData';
-// import { HeaderProvider } from '../../Context/HeaderContext';
 
 // Context
+import HeaderContext from '../../Context/HeaderContext'
 
-const Home = () => {
+const App = () => {
   const [calendar] = useState(CalendarData);
-
-  // const headerData = {
-
-  // }
+  const headerData = useContext(HeaderContext);
 
   return (
     // <HeaderProvider value={headerData}>
     <Router>
       <div className="container">
-        <Header/>
+        <Header headerData={headerData}/>
         <div className="content">
           <div className="content-container">
 
@@ -33,7 +30,6 @@ const Home = () => {
               <Route path="/agenda/:yearId/:monthId">
                 <AgendaContainer calendar={calendar}/>
               </Route>
-
               <Route path="/">
                 <Calendar calendar={calendar}/>
               </Route>
@@ -48,4 +44,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default App;

@@ -1,8 +1,7 @@
-import React, { useEffect, useContext } from 'react';
-import HeaderContext from '../../Context/HeaderContext';
+import React, { useEffect } from 'react';
 
 const Header = (props) => {
-  const headerData = useContext(HeaderContext);
+  const headerData = props.headerData;
 
   useEffect(() => {
     console.log(headerData);
