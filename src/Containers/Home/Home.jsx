@@ -6,19 +6,23 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Fab from '../../Components/Fab/Fab';
 import Header from '../../Components/Header/Header';
 import Calendar from '../../Components/Calendar/Calendar';
-import Agenda from '../../Components/Agenda/Agenda';
+import AgendaContainer from '../../Containers/AgendaContainer/AgendaContainer';
 
 // Data
 import CalendarData from '../../Data/CalendarData';
+// import { HeaderProvider } from '../../Context/HeaderContext';
 
 // Context
-// import { HeaderProvider } from '../../Context/HeaderContext';
 
 const Home = () => {
   const [calendar] = useState(CalendarData);
 
+  // const headerData = {
+
+  // }
 
   return (
+    // <HeaderProvider value={headerData}>
     <Router>
       <div className="container">
         <Header/>
@@ -27,7 +31,7 @@ const Home = () => {
 
             <Switch>
               <Route path="/agenda/:yearId/:monthId">
-                <Agenda calendar={calendar}/>
+                <AgendaContainer calendar={calendar}/>
               </Route>
 
               <Route path="/">
@@ -40,6 +44,7 @@ const Home = () => {
         <Fab />
       </div>
     </Router>
+    // </HeaderProvider>
   );
 }
 
