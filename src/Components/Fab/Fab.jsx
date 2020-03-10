@@ -18,8 +18,7 @@ const Fab = (props) => {
     let url = `/agenda/${yearParam}/${monthParam}`;
     props.history.push(url);
 
-    console.log(props.history);
-    
+    // console.log(props.history);
   }
 
   return (

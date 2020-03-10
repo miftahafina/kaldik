@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter } from 'react-router';
 
 const Header = (props) => {
   const handleClick = () => {
     props.history.push('/');
   }
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  })
 
   return (
     <div className="header" onClick={() => handleClick()}>

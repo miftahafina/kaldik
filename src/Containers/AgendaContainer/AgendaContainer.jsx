@@ -2,7 +2,6 @@
 import React, { Fragment, useState } from 'react';
 import { withRouter } from 'react-router';
 
-
 // Component
 import Header from '../../Components/Header/Header'
 import Agenda from '../../Components/Agenda/Agenda';
