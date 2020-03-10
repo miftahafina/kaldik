@@ -8,7 +8,7 @@ import Header from '../../Components/Header/Header'
 import Agenda from '../../Components/Agenda/Agenda';
 
 const AgendaContainer = (props) => {
-
+  
   const [params] = useState({
       yearId: props.match.params.yearId,
       monthId: props.match.params.monthId,
@@ -22,8 +22,7 @@ const AgendaContainer = (props) => {
     subtitle:props.calendar
             .years.find(x => x.id === params.yearId)
             .name,
-  })
-
+  });
 
   return (
     <Fragment>

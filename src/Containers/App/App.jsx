@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Components
-import Fab from '../../Components/Fab/Fab';
 import CalendarContainer from '../CalendarContainer/CalendarContainer';
 import AgendaContainer from '../AgendaContainer/AgendaContainer';
 
@@ -12,6 +11,7 @@ import CalendarData from '../../Data/CalendarData';
 
 
 const App = () => {
+  
   const [calendar] = useState(CalendarData);
 
   return (
@@ -26,8 +26,7 @@ const App = () => {
             <CalendarContainer calendar={calendar}/>
           </Route>
         </Switch>
-
-        <Fab/>
+        
       </div>  {/* ./container */}
     </Router>
   );

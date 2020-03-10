@@ -3,6 +3,7 @@ import React, { Fragment, useState } from 'react';
 import { withRouter } from 'react-router';
 
 // Component
+import Fab from '../../Components/Fab/Fab';
 import Header from '../../Components/Header/Header'
 
 const CalendarContainer = (props) => {
@@ -42,6 +43,7 @@ const CalendarContainer = (props) => {
           }
         </div>
       </div>
+      <Fab/>
     </Fragment>
   )
 }
