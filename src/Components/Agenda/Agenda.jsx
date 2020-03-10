@@ -19,10 +19,17 @@ const Agenda = (props) => {
     if (multiDate) {
       return (
         <Fragment>
+          <div className="agenda-day">
+            {dayIndo(agenda.begin.getDay())}
+          </div>
           <div className="agenda-date-begin">
             {agenda.begin.getDate()} {monthAbbr(agenda.begin.getMonth())}
           </div>
+          
           <div className="agenda-date-divider"></div>
+          <div className="agenda-day">
+            {dayIndo(agenda.end.getDay())}
+          </div>
           <div className="agenda-date-end">
             {agenda.end.getDate()} {monthAbbr(agenda.end.getMonth())}
           </div>
