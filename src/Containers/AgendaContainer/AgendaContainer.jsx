@@ -23,6 +23,12 @@ const AgendaContainer = (props) => {
             .name,
   });
 
+  const multiMonth = (begin, end) => {
+    if (end) {
+      return begin.getMonth() !== end.getMonth()
+    }
+  }
+
   return (
     <Fragment>
       <Header headerData={headerData}/>
@@ -33,7 +39,7 @@ const AgendaContainer = (props) => {
               .years.find(x => x.id === params.yearId)
               .months.find(x => x.id === params.monthId)
               .agendas.map((agenda) => (
-                <Agenda agenda={agenda} multiDate={agenda.end} key={agenda.id}/>
+                <Agenda agenda={agenda} multiDate={agenda.end} multiMonth={multiMonth(agenda.begin, agenda.end)} key={agenda.id}/>
               )
             )
           }
