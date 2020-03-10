@@ -1,8 +1,8 @@
 import React from 'react';
 
 const HeaderContext = React.createContext({
-  title      : 'Title Sample',
-  subtitle   : 'Subtitle Sample',
+  title      : 'Context Title Sample',
+  subtitle   : 'Context Subtitle Sample',
   setTitle   : () => {},
   setSubtitle: () => {}
 });

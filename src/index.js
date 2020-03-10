@@ -7,11 +7,11 @@ import 'normalize.css';
 import './index.css';
 
 // Components
-import App from './Containers/App/App';
+import Home from './Containers/Home/Home';
 
 // SW
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Home />, document.getElementById('root'));
 
 serviceWorker.unregister();
