@@ -140,6 +140,10 @@ body {
   justify-content: center;
 }
 
+.agenda-day {
+  font-size: 9px;
+}
+
 .agenda-date {
   font-size: 28px;
 }
@@ -147,6 +151,7 @@ body {
 .agenda-month {
   font-size: 12px;
 }
+
 
 .agenda-date-begin {
   font-size: 12px;

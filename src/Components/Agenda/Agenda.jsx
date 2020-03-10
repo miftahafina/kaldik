@@ -9,6 +9,12 @@ const Agenda = (props) => {
     return abbr[month];
   }
 
+  const dayIndo = (day) => {
+    let indo = ['Ahad', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum\'at', 'Sabtu'];
+
+    return indo[day];
+  }
+
   const dateType = (multiDate, agenda) => {
     if (multiDate) {
       return (
@@ -26,6 +32,9 @@ const Agenda = (props) => {
     } else {
       return (
         <Fragment>
+          <div className="agenda-day">
+            {dayIndo(agenda.begin.getDay())}
+          </div>
           <div className="agenda-date">
             {agenda.begin.getDate()}
           </div>
