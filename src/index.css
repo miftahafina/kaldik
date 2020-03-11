@@ -49,6 +49,10 @@ body {
   justify-content: center;
 }
 
+.header:hover {
+  cursor: pointer;
+}
+
 .title {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 32px;
