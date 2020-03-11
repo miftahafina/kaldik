@@ -105,10 +105,10 @@ body {
 
 .month:hover {
   cursor: pointer;
-  box-shadow: 0 2px 8px 0 var(--shadow);
 }
 
 .month:active {
+  box-shadow: 0 2px 8px 0 var(--shadow);
 }
 
 .agenda {
@@ -220,10 +220,10 @@ body {
 
 .fab:hover {
   cursor: pointer;
-  box-shadow: 0 4px 12px 0 var(--shadow);
 }
  
 .fab:active {
+  box-shadow: 0 4px 12px 0 var(--shadow);
 }
 
 .fab > img {
