@@ -25,7 +25,7 @@ const Agenda = (props) => {
       if (multiMonth) {
         return (
           <Fragment>
-            <div className="agenda-day">
+            <div className="agenda-day-sm">
               {dayIndo(agenda.begin.getDay())}
             </div>
             <div className="agenda-date-begin">
@@ -33,7 +33,7 @@ const Agenda = (props) => {
             </div>
 
             <div className="agenda-date-divider"></div>
-            <div className="agenda-day">
+            <div className="agenda-day-sm">
               {dayIndo(agenda.end.getDay())}
             </div>
             <div className="agenda-date-end">
@@ -60,11 +60,11 @@ const Agenda = (props) => {
     } else {
       return (
         <Fragment>
+          <div className="agenda-day">
+            {dayIndo(agenda.begin.getDay())}
+          </div>
           <div className="agenda-date">
             {agenda.begin.getDate()}
-          </div>
-          <div className="agenda-month">
-            {dayIndo(agenda.begin.getDay())}
           </div>
         </Fragment>
       );
