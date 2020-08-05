@@ -14,7 +14,7 @@ const CalendarContainer = (props) => {
   }
 
   const [headerData] = useState({
-    title: 'Kaldik',
+    title: 'Kalender Pendidikan',
     subtitle: 'Pesantren Islam Al-Irsyad'
   })
 
