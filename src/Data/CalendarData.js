@@ -424,7 +424,7 @@ const CalendarData = {
               id: '20210607',
               begin: new Date(2021, 6, 24),
               end: new Date(2021, 6, 26),
-              desc: 'Masa Orientasi Santri Baru, Daurah Alumni, dan Raker Asatidzah',
+              desc: 'Masa Orientasi Santri Baru',
               note: ''
             },
             {
