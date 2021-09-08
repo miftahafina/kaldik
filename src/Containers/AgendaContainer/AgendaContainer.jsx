@@ -14,13 +14,13 @@ const AgendaContainer = (props) => {
   });
 
   const [headerData] = useState({
-    title:props.calendar
-            .years.find(x => x.id === params.yearId)
-            .months.find(x => x.id === params.monthId)
-            .name,
-    subtitle:props.calendar
-            .years.find(x => x.id === params.yearId)
-            .name,
+    title: props.calendar
+           .years.find(x => x.id === params.yearId)
+           .months.find(x => x.id === params.monthId)
+           .name,
+    subtitle: props.calendar
+             .years.find(x => x.id === params.yearId)
+             .name,
   });
 
   const multiMonth = (begin, end) => {

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // Components
 import CalendarContainer from '../CalendarContainer/CalendarContainer';
 import AgendaContainer from '../AgendaContainer/AgendaContainer';
+import AgendaAllContainer from '../AgendaAllContainer/AgendaAllContainer';
 
 // Data
 import CalendarData from '../../Data/CalendarData';
@@ -20,7 +21,7 @@ const App = () => {
 
         <Switch>
           <Route path="/agenda/all">
-            <AgendaContainer calendar={calendar}/>
+            <AgendaAllContainer calendar={calendar}/>
           </Route>
           <Route path="/agenda/:yearId/:monthId">
             <AgendaContainer calendar={calendar}/>
