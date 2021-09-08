@@ -19,6 +19,9 @@ const App = () => {
       <div className="container">
 
         <Switch>
+          <Route path="/agenda/all">
+            <AgendaContainer calendar={calendar}/>
+          </Route>
           <Route path="/agenda/:yearId/:monthId">
             <AgendaContainer calendar={calendar}/>
           </Route>
