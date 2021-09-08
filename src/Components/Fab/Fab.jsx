@@ -4,26 +4,16 @@ import { withRouter } from 'react-router';
 
 // Static
 import CalendarIcon from '../../img/calendar.png';
+import AgendaIcon from '../../img/agenda.png';
 
 const Fab = (props) => {
-  const [today] = useState(
-    new Date()
-  );
-
-  const handleClick = () => {
-    
-    let yearParam  = today.getYear() + 1900;
-    let monthParam = `${yearParam}${('0'+today.getMonth()).slice(-2)}`;
-
-    let url = `/agenda/${yearParam}/${monthParam}`;
-    props.history.push(url);
-
-    // console.log(props.history);
+  const handleClick = (location) => {
+    props.history.push(location)
   }
 
   return (
-    <div className="fab" onClick={() => handleClick()}>
-      <img src={CalendarIcon} alt='Calendar icon' />
+    <div className="fab" onClick={() => handleClick(props.destination === 'agenda' ? '/agenda/all' : '/calendar')}>
+      <img src={props.destination === 'agenda' ? AgendaIcon : CalendarIcon} alt='icon' />
     </div>
   );
 }

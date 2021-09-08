@@ -3,6 +3,7 @@ import React, { Fragment, useState } from 'react';
 import { withRouter } from 'react-router';
 
 // Component
+import Fab from '../../Components/Fab/Fab';
 import Header from '../../Components/Header/Header'
 import Agenda from '../../Components/Agenda/Agenda';
 
@@ -52,6 +53,7 @@ const AgendaContainer = (props) => {
           }
         </div>
       </div>
+      <Fab destionation="calendar"/>
     </Fragment>
   );
 }

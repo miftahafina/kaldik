@@ -43,7 +43,7 @@ const CalendarContainer = (props) => {
           }
         </div>
       </div>
-      <Fab/>
+      <Fab destination="agenda"/>
     </Fragment>
   )
 }
