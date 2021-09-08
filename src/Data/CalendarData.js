@@ -41,7 +41,7 @@ const CalendarData = {
               id: '20210605',
               begin: new Date(2021, 6, 22),
               end: null,
-              desc: 'Libur asatidzah, santriwan/wati, pasca iduladha dan qurban',
+              desc: 'Libur asatidzah, santriwan/wati pasca Iduladha dan qurban',
               note: 'Tidak ada kegiatan belajar mengajar',
             },
           ]
@@ -239,7 +239,7 @@ const CalendarData = {
           agendas: [
             {
               id: '20220301',
-              begin: new Date(2022, 3, 4),
+              begin: new Date(2022, 3, 2),
               end: null,
               desc: 'Perkiraan awal Ramadhan',
               note: '1443 H',
