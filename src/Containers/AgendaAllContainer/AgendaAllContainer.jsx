@@ -7,6 +7,11 @@ import Header from '../../Components/Header/Header'
 import Agenda from '../../Components/Agenda/Agenda';
 
 const AgendaContainer = (props) => {
+
+  const handleClick = (yearId, monthId) => {
+    let url = `/agenda/${yearId}/${monthId}`;
+    props.history.push(url);
+  }
   
   const [headerData] = useState({
     title: 'Kalender Pendidikan',
@@ -26,13 +31,13 @@ const AgendaContainer = (props) => {
         <div className="content-container">
           {
             props.calendar.years.map(year => 
-              <Fragment>
+              <Fragment key={year.id}>
                 <div className="year">{year.name}</div>
 
                 {
                   props.calendar.years.find(x => x.id === year.id).months.map(month => 
-                    <Fragment>
-                      <div className="month mb-24">{month.name}</div>
+                    <Fragment key={month.id}>
+                      <div className="month mb-24" key={month.id} onClick={() => {handleClick(year.id, month.id)}}>{month.name}</div>
 
                       {
                         props.calendar.years.find(x => x.id === year.id).months.find(x => x.id === month.id).agendas.map(agenda => 

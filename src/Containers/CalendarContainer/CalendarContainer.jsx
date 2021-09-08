@@ -9,7 +9,7 @@ import Header from '../../Components/Header/Header'
 const CalendarContainer = (props) => {
 
   const handleClick = (yearId, monthId) => {
-    let url = `agenda/${yearId}/${monthId}`;
+    let url = `/agenda/${yearId}/${monthId}`;
     props.history.push(url);
   }
 
